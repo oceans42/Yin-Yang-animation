@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>阴阳</title>
+  <style>
+    body {
+      background: #ccc;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #yinyang {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #000000 50%, #000000 100%);
+      position: relative;
+      margin: 100px auto 20px;
+      animation-duration: 3s;
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    #yinyang::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      border: 40px solid black;
+    }
+
+    #yinyang::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      border: 40px solid white;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="yinyang"></div>
+  <p>道生一，一生二，二生三，三生万物</p>
+</body>
+
+</html>
